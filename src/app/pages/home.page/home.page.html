@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name" placeholder="Name">
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+
+<table>
+    <tr>
+      <td>Name</td>
+    </tr>
+    <tr *ngFor="name of collections">
+      <td>{{name}}</td>
+    </tr>
+</table>
+
+
