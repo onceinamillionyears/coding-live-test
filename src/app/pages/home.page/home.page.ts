@@ -1,9 +1,10 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home.page',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgFor, NgIf],
   templateUrl: './home.page.html',
   styleUrl: './home.page.css'
 })
@@ -15,6 +16,7 @@ export class HomePage {
     })
 
     collections: string[] = [];
+name: any;
 
     onSubmit() {
       if (this.form.valid) {

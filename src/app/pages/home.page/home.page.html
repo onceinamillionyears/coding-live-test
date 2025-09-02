@@ -8,8 +8,13 @@
     <tr>
       <td>Name</td>
     </tr>
-    <tr *ngFor="name of collections">
-      <td>{{name}}</td>
+    @if(collections.length>0) {
+      <tr *ngFor="let name of collections">
+        <td>{{name}}</td>
+      </tr>
+    }
+    <tr *ngIf="collections.length===0">
+      <td>No Data</td>
     </tr>
 </table>
 
