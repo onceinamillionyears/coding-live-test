@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <input type="text" formControlName="name" placeholder="Name">
-  <button type="submit">Submit</button>
+  <button type="submit" [disabled]="!form.valid">Submit</button>
   <button type="reset">Reset</button>
 </form>
 
